@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Оля Вершок](https://up.htmlacademy.ru/htmlcss/22/user/152428).
-* Наставник: `Неизвестно`.
+* Наставник: [Элина Разина](https://htmlacademy.ru/profile/elina).
 
 ---
 
