@@ -9,3 +9,7 @@
 node_modules/
 npm-debug.*
 Thumbs.db
+*.css
+*.html
+img/logo_name.svg
+img/logo_name.svg
