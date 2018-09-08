@@ -1112,14 +1112,6 @@ legend.filter-range {
   background-size: 27px 23px;
 }
 
-.check input[type="checkbox"]:disabled + label::before {
-  background-image: url("../img/checkbox-off-disabled.svg");
-}
-
-.check input[type="checkbox"]:checked:disabled + label::before {
-  background-image: url("../img/checkbox-on-disabled.svg");
-}
-
 
 /*сортировка */
 
