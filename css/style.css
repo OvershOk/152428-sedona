@@ -635,12 +635,7 @@ body {
   padding: 0;
 }
 
-/*сетка раздела карты */
 
-.map {
-  /* Временно для сетки */
-  min-height: 460px;
-}
 
 /*сетка подвала */
 
@@ -1112,6 +1107,14 @@ legend.filter-range {
   background-size: 27px 23px;
 }
 
+.check input[type="checkbox"]:disabled + label::before {
+  background-image: url("../img/checkbox-off-disabled.svg");
+}
+
+.check input[type="checkbox"]:checked:disabled + label::before {
+  background-image: url("../img/checkbox-on-disabled.svg");
+}
+
 
 /*сортировка */
 
@@ -1411,4 +1414,99 @@ legend.filter-range {
   margin-top: 54px;
   padding-top: 15px;
   padding-bottom: 17px;
+}
+
+.qty-button:disabled,
+.qty-button.disabled,
+.qty-button:disabled:hover,
+.qty-button.disabled:hover,
+.qty-button:disabled:focus,
+.qty-button.disabled:focus,
+.qty-button:disabled:active,
+.qty-button.disabled:active {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.qty-button:disabled:hover g,
+.qty-button.disabled:hover g,
+.qty-button:disabled:focus g,
+.qty-button.disabled:focus g,
+.qty-button:disabled:active g,
+.qty-button.disabled:active g {
+  stroke: #a9a9a9;
+}
+
+
+.map {
+  position: relative;
+  z-index: 1;
+}
+
+.map iframe {
+  position: absolute;
+  border: none;
+}
+
+.features {
+  position: relative;
+  z-index: 3;
+}
+
+.hotel-search {
+  position: relative;
+  z-index: 2;
+}
+
+.hotel-search-popup-hide {
+  display: none;
+}
+
+.hotel-search-popup.show {
+  z-index: -1;
+
+  display: block;
+
+  animation: popup 0.5s;
+}
+
+@keyframes popup {
+  0% {
+    transform: translate(-50%, -100%);
+  }
+  60% {
+    transform: translate(-50%, 20%);
+  }
+  90% {
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.hotel-search-popup.error {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-52%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-48%);
+  }
 }
