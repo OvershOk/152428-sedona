@@ -20,7 +20,8 @@ body {
   position: relative;
 
   background-color: #ffffff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -220,7 +221,8 @@ body {
   color: #000000;
 
   background-color: #ffffff;
-  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
 }
 
 .hotel-search-form label {
@@ -353,7 +355,7 @@ body {
 }
 
 .filters-button {
-  font: inherit;
+  font-size: inherit;
   color: #ffffff;
   text-transform: uppercase;
 
@@ -517,7 +519,7 @@ body {
   background-image: url(../img/stars.svg);
   background-repeat: repeat-x;
   background-position: top right;
-  background-size: 23px 17px;
+  background-size: 18px 17px;
 }
 
 .catalog-rating {
@@ -573,10 +575,16 @@ body {
 }
 
 .features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+      flex-wrap: wrap;
   flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
+
+  -ms-flex-wrap: wrap;
 }
 
 .features-item {
@@ -584,13 +592,21 @@ body {
 }
 
 .features-item-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
+
+  -ms-flex-wrap: wrap;
 }
 
 .features-item-main.right {
-  flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+
+  -webkit-box-direction: reverse;
+  -webkit-box-orient: horizontal;    
 }
 
 .features-item-main .features-image {
@@ -605,6 +621,8 @@ body {
 }
 
 .reason-features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 0;
@@ -640,10 +658,15 @@ body {
 /*сетка подвала */
 
 .main-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
   padding-top: 35px;
   padding-bottom: 40px;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
 }
 
 .hashtag {
@@ -672,6 +695,8 @@ body {
 }
 
 .main-filters-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -683,27 +708,28 @@ body {
 }
 
 fieldset.filter-range {
-  width: 330px;
+  width: 318px;
   margin-left: auto;
+  margin-right: 0px;
+
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 13px;
+          box-sizing: border-box;
   flex-shrink: 0;
 }
 
 legend.filter-range {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .price-controls {
   position: relative;
   height: 32px;
+  margin-top: -15px;
   margin-bottom: 20px;
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
-
 .price-controls::after {
   content: "";
   position: absolute;
@@ -713,52 +739,46 @@ legend.filter-range {
   height: 22px;
   background: #ffffff;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
-
 .price-controls label {
   display: inline-block;
+  vertical-align: middle;
   font-size: 14px;
-  line-height: 32px;
-  vertical-align: top;
+  line-height: 21px;
   cursor: pointer;
+  padding: 5px 0;
 }
-
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 50%;
-  box-sizing: border-box;
-  padding-left: 27px;
-  text-align: center;
+  width: 82px;
+  padding-left: 65px;
 }
-
 .price-controls input {
   width: 50px;
   margin: 0;
-  padding: 0;
   color: inherit;
   font: inherit;
   background: none;
   border: none;
 }
-
 .range-controls {
   position: relative;
+
   margin-bottom: 32px;
 }
-
 .range-controls .scale {
   height: 2px;
+
   background: rgba(255, 255, 255, 0.3);
 }
-
 .range-controls .bar {
   width: 80%;
   height: 2px;
+
   background: #ffffff;
 }
-
 .range-toggle {
   position: absolute;
   top: -9px;
@@ -768,27 +788,30 @@ legend.filter-range {
   border: 8px solid #ffffff;
   border-radius: 50%;
   -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+          box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
+}
+.range-toggle:hover {
+  background: #1c4f80;
+
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .range-toggle-min {
   left: 0;
 }
-
 .range-toggle-max {
   left: 80%;
 }
 
-.range-toggle:hover {
-  background: #1c4f80;
-}
-
-.button-form-catalog {
+.filters-button {
   display: block;
   margin: 0 auto;
+  width: 137px;
+  margin-left: 85px;
   padding: 6px 34px;
-  font-family: inherit;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -797,9 +820,10 @@ legend.filter-range {
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
+  }
 }
 
-.button-form-catalog:hover {
+.filters-button:hover {
   color: #000000;
   background-color: #ffffff;
 }
@@ -807,6 +831,8 @@ legend.filter-range {
 /*сетка каталога гостиниц */
 
 .catalog-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -851,13 +877,20 @@ legend.filter-range {
   top: 0;
   left: 50%;
 
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /*главное меню */
 
 .site-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
   padding-right: 72px;
   padding-left: 72px;
 }
@@ -935,7 +968,10 @@ legend.filter-range {
   padding-left: 5px;
 
   background-color: #eeeeee;
-  transform: translateX(-50%);
+
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 
   counter-increment: reasons;
 }
@@ -1013,9 +1049,7 @@ legend.filter-range {
 .main-footer.index {
   position: absolute;
   bottom: 0;
-}
-.main-footer.catalog {
-
+  z-index: 2;
 }
 
 .hashtag {
@@ -1023,11 +1057,16 @@ legend.filter-range {
 }
 
 .footer-social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   width: 150px;
   margin: 0 auto;
   padding: 0;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
 }
 
 .social-btn {
@@ -1052,9 +1091,16 @@ legend.filter-range {
 }
 
 .footer-copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
 }
 
 .footer-copyright-link {
@@ -1119,13 +1165,20 @@ legend.filter-range {
 /*сортировка */
 
 .sort-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .sort-direction-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
+
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
 }
 
 .sort-type {
@@ -1174,6 +1227,8 @@ legend.filter-range {
 .catalog-item {
   position: relative;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 23px;
   padding-bottom: 31px;
@@ -1192,9 +1247,13 @@ legend.filter-range {
 }
 
 .catalog-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 500px;
+
+  -ms-flex-wrap: wrap;
 }
 
 .catalog-image {
@@ -1232,6 +1291,9 @@ legend.filter-range {
   align-self: stretch;
   width: 110px;
   margin-right: 6px;
+
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
 }
 
 .catalog-type {
@@ -1257,10 +1319,17 @@ legend.filter-range {
 }
 
 .catalog-item-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-top: 5px;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
 }
 
 .catalog-stars.star-1 {
@@ -1299,17 +1368,25 @@ legend.filter-range {
   width: 458px;
   padding: 55px;
 
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .hotel-search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  -ms-flex-wrap: wrap;
 }
 
 .hotel-search-date {
   position: relative;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 0;
@@ -1320,6 +1397,9 @@ legend.filter-range {
 .hotel-search-date input {
   flex-grow: 1;
   padding: 5px 40px 4px 9px;
+
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
 }
 
 .hotel-search-form label {
@@ -1356,6 +1436,8 @@ legend.filter-range {
 }
 
 .hotel-search-qty {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 50%;
   margin: 0;
@@ -1393,7 +1475,9 @@ legend.filter-range {
   top: 50%;
   left: 50%;
 
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .qty-button g {
@@ -1445,6 +1529,7 @@ legend.filter-range {
 
 .map iframe {
   position: absolute;
+
   border: none;
 }
 
@@ -1467,7 +1552,8 @@ legend.filter-range {
 
   display: block;
 
-  animation: popup 0.5s;
+-webkit-animation: popup 0.5s;
+        animation: popup 0.5s;
 }
 
 @keyframes popup {
@@ -1486,13 +1572,15 @@ legend.filter-range {
 }
 
 .hotel-search-popup.error {
-  animation: shake 0.5s;
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 
   10%,
@@ -1500,13 +1588,49 @@ legend.filter-range {
   50%,
   70%,
   90% {
-    transform: translateX(-52%);
+    -webkit-transform: translateX(-52%);
+            transform: translateX(-52%);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(-48%);
+    -webkit-transform: translateX(-48%);
+            transform: translateX(-48%);
   }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-52%);
+            transform: translateX(-52%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(-48%);
+            transform: translateX(-48%);
+  }
+}
+
+.hotel-search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+      flex-wrap: wrap;
+
+  -ms-flex-wrap: wrap;
 }
