@@ -512,14 +512,14 @@ body {
 
 .catalog-stars {
   margin: 0;
-  margin-right: -5px;
+  margin-right: -1px;
   padding: 0;
   height: 17px;
   align-self: flex-end;
   background-image: url(../img/stars.svg);
   background-repeat: repeat-x;
   background-position: top right;
-  background-size: 18px 17px;
+  background-size: 23px 17px;
 }
 
 .catalog-rating {
@@ -606,7 +606,7 @@ body {
       flex-direction: row-reverse;
 
   -webkit-box-direction: reverse;
-  -webkit-box-orient: horizontal;    
+  -webkit-box-orient: horizontal;
 }
 
 .features-item-main .features-image {
@@ -664,6 +664,7 @@ body {
   align-items: center;
   padding-top: 35px;
   padding-bottom: 40px;
+  overflow: hidden;
 
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -837,7 +838,7 @@ legend.filter-range {
   align-items: flex-end;
   padding-top: 30px;
   padding-right: 72px;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   padding-left: 72px;
 }
 
@@ -1052,7 +1053,7 @@ legend.filter-range {
 }
 
 .hashtag {
-  margin-bottom: 5px;
+  margin-bottom: -1px;
 }
 
 .footer-social ul {
@@ -1143,6 +1144,12 @@ legend.filter-range {
 
   background-image: url("../img/checkbox-off.svg");
   background-size: 23px 23px;
+  background-repeat: no-repeat;
+}
+
+.check input[type="checkbox"]:focus + label {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .check input[type="checkbox"]:checked + label::before {
@@ -1272,8 +1279,7 @@ legend.filter-range {
 
 .catalog-item-name {
   width: 100%;
-  margin: 0;
-  margin-bottom: 5px;
+  margin: 2px 0 3px;
   padding: 0;
 }
 
@@ -1353,7 +1359,7 @@ legend.filter-range {
 
 .catalog-rating {
   margin: 0;
-  padding: 4px 0;
+  padding: 3px 0;
 
   text-align: center;
 }
