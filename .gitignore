@@ -13,3 +13,5 @@ Thumbs.db
 *.html
 img/logo_name.svg
 img/logo_name.svg
+css/style.css
+css/style.min.css
