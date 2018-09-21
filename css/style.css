@@ -219,6 +219,7 @@ body {
 
 .hotel-search-popup {
   color: #000000;
+    display: none;
 
   background-color: #ffffff;
   -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
@@ -1034,7 +1035,7 @@ legend.filter-range {
 }
 
 .hotel-search-intro {
-  width: 435px;
+  min-width: 435px;
   margin: 0 auto;
   margin-bottom: 46px;
 }
@@ -1400,11 +1401,13 @@ legend.filter-range {
 }
 
 .hotel-search-date input {
-  flex-grow: 1;
-  padding: 5px 40px 4px 9px;
+    flex-grow: 1;
+    padding: 5px 40px 4px 9px;
+    height: 39px;
+    box-sizing: border-box;
 
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
 }
 
 .hotel-search-form label {
@@ -1548,9 +1551,11 @@ legend.filter-range {
   z-index: 2;
 }
 
+/*
 .hotel-search-popup-hide {
   display: none;
 }
+*/
 
 .hotel-search-popup.show {
   z-index: -1;
@@ -1631,11 +1636,4 @@ legend.filter-range {
   }
 }
 
-.hotel-search-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-      flex-wrap: wrap;
 
-  -ms-flex-wrap: wrap;
-}
